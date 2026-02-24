@@ -1,70 +1,83 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pinnacle Estates</title>
+    <title>Residencia de Lujo "El Oasis"</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         .hero-background {
-            background-image: url('https://images.unsplash.com/photo-1560448100-348f95c4795e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-image: url('https://images.unsplash.com/photo-1560518883-ff56e4c79080?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
         }
     </style>
 </head>
-<body class="bg-slate-950">
+<body class="font-sans antialiased bg-slate-950 text-white">
 
-    <main class="hero-background min-h-screen relative flex items-center justify-center p-4">
+    <!-- Hero Section -->
+    <section class="hero-background relative min-h-screen flex items-center justify-center p-4">
         <!-- Superposición oscura -->
-        <div class="absolute inset-0 bg-slate-950 opacity-70"></div>
+        <div class="absolute inset-0 bg-black opacity-70"></div>
 
-        <!-- Contenido principal -->
-        <div class="relative z-10 text-white text-center p-8 max-w-4xl w-full">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-10 leading-tight">
-                <span class="text-amber-500">The Pinnacle</span> <span class="text-white">Estates</span>
+        <!-- Contenido central del Hero -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto">
+            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-8 drop-shadow-lg">
+                Residencia de Lujo <span class="text-amber-500">"El Oasis"</span>
             </h1>
 
-            <!-- Tarjeta elegante con descripción -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-2xl mx-auto shadow-2xl border-2 border-amber-500 mb-12">
-                <p class="text-lg md:text-xl font-light leading-relaxed text-gray-100">
-                    Descubre un nuevo estándar de vida en propiedades que redefinen la opulencia. Cada residencia es una obra maestra de diseño y exclusividad, ofreciendo vistas inigualables y servicios personalizados para el cliente más exigente. Vive el lujo sin límites.
+            <!-- Tarjeta de contenido con descripción -->
+            <div class="bg-white p-8 sm:p-10 rounded-xl shadow-2xl max-w-2xl mx-auto mt-10 transform hover:scale-105 transition-transform duration-300">
+                <p class="text-slate-900 text-lg sm:text-xl leading-relaxed mb-6">
+                    Descubra una colección exclusiva de propiedades inigualables, donde la arquitectura de vanguardia se fusiona con paisajes prístinos para crear santuarios privados de belleza y tranquilidad. Cada propiedad es una obra maestra, diseñada para el individuo exigente que busca lo extraordinario. Ubicadas en las zonas más codiciadas, nuestras residencias ofrecen privacidad absoluta, vistas espectaculares y acceso a servicios de clase mundial, redefiniendo el concepto de vida de lujo.
                 </p>
-            </div>
-
-            <!-- Formulario de contacto minimalista -->
-            <div class="max-w-xl mx-auto bg-white/5 backdrop-blur-sm rounded-xl p-6 shadow-xl border border-gray-700">
-                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-amber-500">Contáctanos</h2>
-                <form class="space-y-5">
-                    <div>
-                        <input type="text" id="name" name="name" placeholder="Tu Nombre" 
-                               class="w-full bg-slate-800/70 text-white placeholder-gray-400 border border-amber-500 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition duration-300">
-                    </div>
-                    <div>
-                        <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" 
-                               class="w-full bg-slate-800/70 text-white placeholder-gray-400 border border-amber-500 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition duration-300">
-                    </div>
-                    <div>
-                        <input type="tel" id="phone" name="phone" placeholder="Tu Número de Teléfono (Opcional)" 
-                               class="w-full bg-slate-800/70 text-white placeholder-gray-400 border border-amber-500 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition duration-300">
-                    </div>
-                    <div>
-                        <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje" 
-                                  class="w-full bg-slate-800/70 text-white placeholder-gray-400 border border-amber-500 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-amber-500 transition duration-300"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" 
-                                class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-lg hover:bg-amber-600 transition duration-300 transform hover:scale-105">
-                            Enviar Consulta
-                        </button>
-                    </div>
-                </form>
+                <a href="#contact-form" class="inline-block bg-amber-500 text-white text-lg font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-amber-600 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                    Explorar Propiedades
+                </a>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section id="contact-form" class="bg-slate-950 py-16 px-4">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-8">Contáctenos</h2>
+            <p class="text-slate-300 text-lg mb-10">
+                Estamos a su disposición para cualquier consulta. Rellene el formulario y nos pondremos en contacto con usted a la brevedad.
+            </p>
+
+            <form class="space-y-6 bg-slate-800 p-8 rounded-xl shadow-xl border border-amber-500">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Su Nombre"
+                           class="w-full p-4 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-slate-400 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-200"
+                           required>
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Su Correo Electrónico"
+                           class="w-full p-4 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-slate-400 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-200"
+                           required>
+                </div>
+                <div>
+                    <textarea id="message" name="message" rows="5" placeholder="Su Mensaje"
+                              class="w-full p-4 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-slate-400 focus:ring-2 focus:ring-amber-500 focus:border-transparent transition duration-200"
+                              required></textarea>
+                </div>
+                <div>
+                    <button type="submit"
+                            class="w-full bg-amber-500 text-white font-bold py-4 px-6 rounded-full shadow-lg hover:bg-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-700 focus:ring-offset-2 focus:ring-offset-slate-800 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer opcional -->
+    <footer class="bg-slate-950 text-slate-400 py-8 text-center border-t border-slate-800">
+        <p>&copy; 2023 Residencia de Lujo "El Oasis". Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
+```
