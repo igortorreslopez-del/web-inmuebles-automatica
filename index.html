@@ -4,123 +4,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $json.Nombre }} | Inmobiliaria de Ultra Lujo</title>
+    <title>{{ $json.Nombre }} | Exclusive Real Estate Sanctuary</title>
+
+    <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@100;300;400;600&display=swap"
         rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fbf8f1',
+                            100: '#f4ede1',
+                            200: '#ead9c0',
+                            300: '#d9bd92',
+                            400: '#c8a06d',
+                            500: '#b8864b', // Primary Luxury Gold
+                            600: '#a3713f',
+                            700: '#855935',
+                            800: '#6d4930',
+                            900: '#5c3e2b',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        :root {
             scroll-behavior: smooth;
         }
 
-        .font-serif {
-            font-family: 'Playfair Display', serif;
+        body {
+            background-color: #020617;
+            overflow-x: hidden;
         }
 
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 0.9));
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, rgba(2, 6, 23, 0.8) 70%, rgba(2, 6, 23, 1) 100%);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(184, 134, 75, 0.3);
+        }
+
+        .line-draw {
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .aos-animate .line-draw {
+            width: 100%;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #b8864b;
+            border-radius: 10px;
         }
     </style>
 </head>
 
-<body class="bg-slate-950 text-slate-200 antialiased">
+<body class="text-slate-300 font-sans">
 
-    <!-- Hero Section -->
-    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image -->
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ $json.Fotos[0].url }}');">
-            </div>
-            <div class="absolute inset-0 hero-overlay z-10"></div>
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-6 transition-all duration-500 hover:bg-slate-950/80 backdrop-blur-md">
+        <div class="text-gold-500 font-serif text-3xl tracking-[0.2em] font-light">
+            ESTATE<span class="font-bold">LUXE</span>
         </div>
-
-        <!-- Navigation Placeholder -->
-        <nav class="absolute top-0 w-full p-8 flex justify-between items-center z-30">
-            <div class="text-amber-500 font-serif text-2xl font-bold tracking-widest">LUXE</div>
-            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest text-white/80">
-                <a href="#" class="hover:text-amber-500 transition-colors">Propiedades</a>
-                <a href="#" class="hover:text-amber-500 transition-colors">Inversión</a>
-                <a href="#" class="hover:text-amber-500 transition-colors">Contacto</a>
-            </div>
-        </nav>
-
-        <!-- Main Content -->
-        <div class="relative z-20 container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-8xl font-serif text-white mb-6 uppercase tracking-tight">
-                {{ $json.Nombre }}
-            </h1>
-
-            <div class="max-w-2xl mx-auto">
-                <div
-                    class="bg-slate-950/40 backdrop-blur-xl border border-amber-500/20 p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden group">
-                    <!-- Subtle Glow -->
-                    <div
-                        class="absolute -top-24 -left-24 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-700">
-                    </div>
-
-                    <p class="text-lg md:text-xl text-slate-300 leading-relaxed font-light mb-8 italic">
-                        "{{ $json.Descripción }}"
-                    </p>
-
-                    <div class="w-16 h-px bg-amber-500 mx-auto mb-8"></div>
-
-                    <a href="#contacto"
-                        class="inline-block bg-amber-500 hover:bg-amber-600 text-slate-950 px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
-                        Solicitar Dossier Exclusivo
-                    </a>
-                </div>
-            </div>
+        <div
+            class="hidden lg:flex items-center space-x-12 text-[10px] uppercase tracking-[0.3em] font-semibold text-white/60">
+            <a href="#about" class="hover:text-gold-500 transition-colors">The Legacy</a>
+            <a href="#amenities" class="hover:text-gold-500 transition-colors">Amenities</a>
+            <a href="#gallery" class="hover:text-gold-500 transition-colors">Gallery</a>
+            <a href="#contact"
+                class="px-6 py-3 border border-gold-500/30 text-gold-500 hover:bg-gold-500 hover:text-slate-950 transition-all rounded-sm">Inquiry</a>
         </div>
+    </nav>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-            <div class="w-px h-12 bg-gradient-to-b from-amber-500 to-transparent"></div>
-        </div>
-    </header>
+    <!-- Main Content Wrapper -->
+    <main>
 
-    <!-- Footer / Contact Form -->
-    <section id="contacto" class="py-24 bg-slate-950">
-        <div class="container mx-auto px-6">
-            <div class="max-w-xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-serif text-amber-500 mb-4 uppercase tracking-widest">Contacto Directo</h2>
-                    <p class="text-slate-500 text-sm">Privacidad y discreción absoluta para inversores exclusivos.</p>
-                </div>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-cover bg-center scale-105 animate-[pulse_10s_infinite_alternate]"
+                    style="background-image: url('{{ $json.Fotos[0].url }}');"></div>
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
 
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="NOMBRE COMPLETO"
-                            class="bg-transparent border-b border-slate-800 py-3 px-2 text-sm focus:outline-none focus:border-amber-500 transition-colors uppercase tracking-widest w-full">
-                        <input type="email" placeholder="CORREO ELECTRÓNICO"
-                            class="bg-transparent border-b border-slate-800 py-3 px-2 text-sm focus:outline-none focus:border-amber-500 transition-colors uppercase tracking-widest w-full">
-                    </div>
-                    <div>
-                        <textarea placeholder="MENSAJE" rows="1"
-                            class="bg-transparent border-b border-slate-800 py-3 px-2 text-sm focus:outline-none focus:border-amber-500 transition-colors uppercase tracking-widest w-full"></textarea>
-                    </div>
-                    <div class="pt-6">
-                        <button
-                            class="w-full border border-amber-500/50 text-amber-500 hover:bg-amber-500 hover:text-slate-950 py-4 rounded-lg text-xs font-bold uppercase tracking-[0.3em] transition-all duration-300">
-                            Enviar Solicitud
-                        </button>
-                    </div>
-                </form>
-
-                <div class="mt-20 text-center border-t border-slate-900 pt-12">
-                    <p class="text-[10px] text-slate-600 uppercase tracking-[0.5em] mb-4">© 2026 Residencia de Ultra
-                        Lujo | {{ $json.Nombre }}</p>
-                    <div class="flex justify-center gap-6">
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/20"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/20"></span>
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500/20"></span>
+            <div class="relative z-10 container mx-auto px-6 pt-20">
+                <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+                    <span
+                        class="block text-gold-500 text-sm tracking-[0.5em] uppercase mb-4 font-semibold">Exclusividadel
+                        Absoluta</span>
+                    <h1 class="text-6xl md:text-9xl font-serif text-white mb-8 leading-none italic font-light">
+                        {{ $json.Nombre }}
+                    </h1>
+                    <div class="flex justify-center items-center space-x-4 mb-8">
+                        <div class="h-px w-12 bg-gold-500/50"></div>
+                        <span class="text-slate-400 text-xs tracking-[0.3em] uppercase">Private Residence
+                            Sanctuary</span>
+                        <div class="h-px w-12 bg-gold-500/50"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                <span class="text-[9px] uppercase tracking-[0.4em] text-white/30 mb-4">Discover More</span>
+                <div class="w-px h-16 bg-gradient-to-b from-gold-500 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- The Legacy Section -->
+        <section id="about" class="py-32 bg-slate-950 relative overflow-hidden">
+            <div class="absolute right-0 top-0 w-1/3 h-full bg-gold-500/[0.02] -skew-x-12 translate-x-1/2"></div>
+
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-gold-500 text-sm tracking-[0.4em] uppercase mb-6">El Renacimiento del Lujo</h2>
+                        <h3 class="text-4xl md:text-6xl font-serif text-white mb-8 leading-tight italic">
+                            Una herencia de distinción y <span class="text-gold-500">perfección arquitectónica.</span>
+                        </h3>
+                        <div class="h-1 bg-gold-500/20 mb-8 line-draw"></div>
+                        <p
+                            class="text-lg text-slate-400 leading-relaxed font-light first-letter:text-5xl first-letter:font-serif first-letter:text-gold-500 first-letter:mr-3 first-letter:float-left">
+                            {{ $json.Descripción }}
+                        </p>
+                    </div>
+
+                    <div class="relative" data-aos="zoom-out-left">
+                        <div class="aspect-[4/5] overflow-hidden rounded-sm border border-gold-500/10">
+                            <img src="{{ $json.Fotos[0].url }}" alt="Architecture" class="w-full h-full object-cover">
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -left-10 glass p-8 max-w-xs hidden md:block border-l-4 border-gold-500">
+                            <p class="text-xs tracking-widest text-slate-500 uppercase mb-2">Signature Style</p>
+                            <p class="text-white italic">"Diseñado para aquellos que no solo habitan una casa, sino que
+                                narran una historia."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Section -->
+        <section id="amenities" class="py-32 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-24" data-aos="fade-up">
+                    <h2 class="text-gold-500 text-sm tracking-[0.5em] uppercase mb-4">Curated Experiences</h2>
+                    <h3 class="text-4xl md:text-5xl font-serif text-white italic">Amenidades de Clase Mundial</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="glass p-12 transition-all duration-500 hover:-translate-y-2 border-b-2 border-transparent hover:border-gold-500"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-12 h-12 mb-8 border border-gold-500/30 flex items-center justify-center text-gold-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-serif text-white mb-4 italic">Vistas Panorámicas</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Encuadre infinito hacia el
+                            horizonte, donde la arquitectura se funde con la naturaleza.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="glass p-12 transition-all duration-500 hover:-translate-y-2 border-b-2 border-transparent hover:border-gold-500"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div
+                            class="w-12 h-12 mb-8 border border-gold-500/30 flex items-center justify-center text-gold-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-serif text-white mb-4 italic">Concierge 24/7</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Servicio personalizado que anticipa
+                            cada una de sus necesidades con discreción absoluta.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="glass p-12 transition-all duration-500 hover:-translate-y-2 border-b-2 border-transparent hover:border-gold-500"
+                        data-aos="fade-up" data-aos-delay="300">
+                        <div
+                            class="w-12 h-12 mb-8 border border-gold-500/30 flex items-center justify-center text-gold-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-7.714 2.143L11 21l-2.286-6.857L1 12l7.714-2.143L11 3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-serif text-white mb-4 italic">Wellness Center</h4>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">Spa de diseño italiano, piscina
+                            climatizada y gimnasio de última generación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exclusive Inidicator Section (Mid Transition) -->
+        <section class="h-96 relative flex items-center justify-center bg-fixed bg-center bg-cover"
+            style="background-image: url('{{ $json.Fotos[0].url }}');">
+            <div class="absolute inset-0 bg-slate-950/70 backdrop-blur-[2px]"></div>
+            <div class="relative z-10 text-center" data-aos="zoom-in">
+                <h4 class="text-3xl md:text-5xl font-serif text-white italic tracking-wider">Más que una
+                    propiedad,<br>es un legado.</h4>
+            </div>
+        </section>
+
+        <!-- Inquiry Sanctuary (Contact) -->
+        <section id="contact" class="py-32 bg-slate-950">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto glass rounded-sm overflow-hidden flex flex-col md:flex-row shadow-2xl">
+                    <div class="md:w-1/3 bg-gold-500 p-12 text-slate-950 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-xs uppercase tracking-[0.3em] font-bold mb-8">Protocolo Privado</h2>
+                            <h3 class="text-3xl font-serif font-bold italic leading-tight mb-4">Agende su visita
+                                privada.</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-xs uppercase tracking-widest opacity-80 font-semibold italic">Luxury
+                                Concierge</p>
+                            <p class="text-xs uppercase tracking-widest opacity-80 font-semibold italic">Privacy Assured
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="md:w-2/3 p-12 md:p-16">
+                        <form class="space-y-8">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="relative group">
+                                    <input type="text" id="name" required
+                                        class="peer w-full bg-transparent border-b border-slate-700 py-3 focus:outline-none focus:border-gold-500 transition-colors uppercase text-[10px] tracking-widest placeholder-transparent">
+                                    <label for="name"
+                                        class="absolute left-0 -top-3.5 text-slate-500 text-[9px] uppercase tracking-widest transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-placeholder-shown:text-slate-700 peer-focus:-top-3.5 peer-focus:text-gold-500">Nombre
+                                        Completo</label>
+                                </div>
+                                <div class="relative group">
+                                    <input type="email" id="email" required
+                                        class="peer w-full bg-transparent border-b border-slate-700 py-3 focus:outline-none focus:border-gold-500 transition-colors uppercase text-[10px] tracking-widest placeholder-transparent">
+                                    <label for="email"
+                                        class="absolute left-0 -top-3.5 text-slate-500 text-[9px] uppercase tracking-widest transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-placeholder-shown:text-slate-700 peer-focus:-top-3.5 peer-focus:text-gold-500">Email
+                                        Corporativo</label>
+                                </div>
+                            </div>
+                            <div class="relative group">
+                                <textarea id="msg" rows="1"
+                                    class="peer w-full bg-transparent border-b border-slate-700 py-3 focus:outline-none focus:border-gold-500 transition-colors uppercase text-[10px] tracking-widest placeholder-transparent"></textarea>
+                                <label for="msg"
+                                    class="absolute left-0 -top-3.5 text-slate-500 text-[9px] uppercase tracking-widest transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3 peer-placeholder-shown:text-slate-700 peer-focus:-top-3.5 peer-focus:text-gold-500">Intereses
+                                    Particulares</label>
+                            </div>
+                            <div class="pt-8">
+                                <button type="submit"
+                                    class="w-full bg-slate-900 border border-gold-500/20 text-gold-500 hover:bg-gold-500 hover:text-slate-950 py-5 transition-all duration-500 text-[10px] uppercase tracking-[0.4em] font-bold">
+                                    Solicitar Dossier Digital
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900 bg-slate-950">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="#"
+                    class="text-slate-600 hover:text-gold-500 transition-colors text-[10px] uppercase tracking-widest">Instagram</a>
+                <a href="#"
+                    class="text-slate-600 hover:text-gold-500 transition-colors text-[10px] uppercase tracking-widest">LinkedIn</a>
+                <a href="#"
+                    class="text-slate-600 hover:text-gold-500 transition-colors text-[10px] uppercase tracking-widest">Architectural
+                    Digest</a>
+            </div>
+            <p class="text-[9px] text-slate-700 uppercase tracking-[0.6em]">© 2026 EstateLuxe | {{ $json.Nombre }}</p>
+        </div>
+    </footer>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4', 'bg-slate-950/95');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('py-4', 'bg-slate-950/95');
+                nav.classList.add('py-6');
+            }
+        });
+    </script>
 </body>
 
 </html>
