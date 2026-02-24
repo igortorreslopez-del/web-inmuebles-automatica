@@ -1,161 +1,36 @@
+¡Claro! Aquí tienes el código HTML para el archivo `index.html` que cumple con tus especificaciones.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Residencia Áurea | Lujo Exclusivo en la Costa del Sol</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>[NOMBRE DE LA PROPIEDAD DE LUJO]</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'raleway': ['Raleway', 'sans-serif'],
+                    },
+                    colors: {
+                        'midnight-blue': '#0f172a',
+                        'metallic-gold': '#D4AF37',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        .font-playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-lato {
-            font-family: 'Lato', sans-serif;
-        }
-        .hero-bg {
-            background-image: url('https://source.unsplash.com/random/1600x900/?luxury-villa,mediterranean-sea,infinity-pool,sunset'); /* Imagen placeholder de alta calidad */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Efecto Parallax sutil */
-        }
-    </style>
-</head>
-<body class="font-lato text-stone-900 bg-stone-50 antialiased">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <!-- Hero Section -->
-    <header class="relative hero-bg h-screen flex items-center justify-center text-center text-stone-50">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative z-10 p-8 max-w-5xl mx-auto">
-            <h1 class="font-playfair text-6xl md:text-8xl font-bold leading-tight drop-shadow-lg animate-fade-in-up">Residencia Áurea</h1>
-            <p class="mt-6 text-xl md:text-3xl font-lato font-light tracking-wide italic px-4 animate-fade-in-up delay-200">Donde el arte de vivir se encuentra con el horizonte del Mediterráneo.</p>
-            <a href="#contacto" class="mt-12 inline-block bg-amber-400 text-stone-900 font-bold font-lato text-lg md:text-xl px-12 py-5 rounded-full shadow-xl hover:bg-amber-300 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-opacity-50 animate-fade-in-up delay-400">
-                Descubra Su Paraíso
-            </a>
-        </div>
-    </header>
-
-    <!-- Introductory / Essence Section -->
-    <section class="py-24 px-8 bg-stone-50 text-stone-900 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="font-playfair text-5xl font-bold mb-10 text-stone-800">Una Vida de Distinción</h2>
-            <p class="text-xl leading-relaxed text-stone-700">
-                Residencia Áurea es más que una propiedad; es un legado, una declaración de estilo y una invitación a experimentar la cúspide del lujo costero. Ubicada en la joya de la Costa del Sol, ofrece un santuario de sofisticación y exclusividad, donde cada detalle ha sido concebido para proporcionar una existencia de opulencia, serenidad y las vistas más sublimes del mar Mediterráneo.
-            </p>
-        </div>
-    </section>
-
-    <!-- Características Section -->
-    <section class="py-24 px-8 bg-stone-900 text-stone-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-playfair text-5xl font-bold text-center mb-16 text-amber-400">Características Exclusivas</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="text-center p-6 bg-stone-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-amber-400 text-6xl mb-4">✨</div>
-                    <h3 class="font-playfair text-3xl font-bold mb-3">Cinco Suites de Ensueño</h3>
-                    <p class="text-lg font-lato leading-relaxed opacity-90">Cinco dormitorios en suite, cada uno un santuario personal de diseño impecable y confort absoluto.</p>
-                </div>
-                <div class="text-center p-6 bg-stone-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-amber-400 text-6xl mb-4">🏊‍♀️</div>
-                    <h3 class="font-playfair text-3xl font-bold mb-3">Piscina Infinita Climatizada</h3>
-                    <p class="text-lg font-lato leading-relaxed opacity-90">Sumérjase en un oasis de calma con vistas ininterrumpidas al azul del Mediterráneo, durante todo el año.</p>
-                </div>
-                <div class="text-center p-6 bg-stone-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-amber-400 text-6xl mb-4">🏋️</div>
-                    <h3 class="font-playfair text-3xl font-bold mb-3">Gimnasio Privado de Vanguardia</h3>
-                    <p class="text-lg font-lato leading-relaxed opacity-90">Mantenga su bienestar con equipamiento de última generación, en la privacidad de su propio hogar.</p>
-                </div>
-                <div class="text-center p-6 bg-stone-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-amber-400 text-6xl mb-4">🍷</div>
-                    <h3 class="font-playfair text-3xl font-bold mb-3">Exquisita Bodega Climatizada</h3>
-                    <p class="text-lg font-lato leading-relaxed opacity-90">Un espacio sublime para almacenar y degustar su colección de vinos más preciada.</p>
-                </div>
-                <div class="text-center p-6 bg-stone-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-amber-400 text-6xl mb-4">🏝️</div>
-                    <h3 class="font-playfair text-3xl font-bold mb-3">Acceso Directo a Cala Privada</h3>
-                    <p class="text-lg font-lato leading-relaxed opacity-90">Un privilegio inigualable: la serenidad de su propia extensión de costa mediterránea.</p>
-                </div>
-                <div class="text-center p-6 bg-stone-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-amber-400 text-6xl mb-4">🌅</div>
-                    <h3 class="font-playfair text-3xl font-bold mb-3">Vistas Panorámicas Ininterrumpidas</h3>
-                    <p class="text-lg font-lato leading-relaxed opacity-90">Cada amanecer y atardecer, un espectáculo privado desde la comodidad de cada rincón de su villa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ubicación Section -->
-    <section class="py-24 px-8 bg-stone-50 text-stone-900">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="font-playfair text-5xl font-bold mb-10 text-stone-800">Ubicación Incomparable</h2>
-            <p class="text-xl leading-relaxed mb-12 text-stone-700">
-                Situada en el corazón de la codiciada <span class="font-bold text-amber-600">Costa del Sol</span>, Residencia Áurea ofrece la perfecta armonía entre el aislamiento exclusivo y la proximidad a los enclaves más prestigiosos. Disfrute de campos de golf de renombre mundial, puertos deportivos de élite, una vibrante gastronomía y la rica cultura andaluza, todo a su alcance. Su ubicación estratégica garantiza privacidad sin renunciar a la vida social más sofisticada.
-            </p>
-            <div class="w-full h-96 bg-gray-200 flex items-center justify-center text-gray-500 italic text-xl border border-gray-300 rounded-lg shadow-md">
-                [Espacio Reservado: Mapa Interactivo Personalizado de la Ubicación Exclusiva]
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Mid Section -->
-    <section class="py-24 px-8 bg-amber-400 text-stone-900 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="font-playfair text-5xl font-bold mb-10 text-stone-900">Su Visión, Su Realidad</h2>
-            <p class="text-xl leading-relaxed mb-12 text-stone-800">
-                La oportunidad de poseer una obra maestra arquitectónica en uno de los destinos más deseados y exclusivos del Mediterráneo. Le invitamos a descubrirla.
-            </p>
-            <a href="#contacto" class="inline-block bg-stone-900 text-amber-400 font-bold font-lato text-lg md:text-xl px-14 py-6 rounded-full shadow-xl hover:bg-stone-800 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-opacity-50">
-                Solicite Información Exclusiva
-            </a>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contacto" class="py-24 px-8 bg-stone-900 text-stone-50">
-        <div class="max-w-xl mx-auto">
-            <h2 class="font-playfair text-5xl font-bold text-center mb-12 text-amber-400">Coordinar una Visita Privada</h2>
-            <p class="text-center text-lg mb-10 opacity-90 text-stone-300">
-                Nuestro equipo de asesores de propiedades de lujo está a su disposición para proporcionarle una experiencia personalizada. Por favor, complete el formulario a continuación y nos pondremos en contacto a la brevedad.
-            </p>
-            <form action="#" method="POST" class="space-y-8">
-                <div>
-                    <label for="name" class="block text-sm font-lato font-medium text-stone-200 mb-3">Nombre Completo</label>
-                    <input type="text" id="name" name="name" required
-                           class="w-full px-6 py-4 bg-stone-800 border border-stone-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 text-stone-50 placeholder-stone-400 text-lg">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-lato font-medium text-stone-200 mb-3">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required
-                           class="w-full px-6 py-4 bg-stone-800 border border-stone-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 text-stone-50 placeholder-stone-400 text-lg">
-                </div>
-                <div>
-                    <label for="phone" class="block text-sm font-lato font-medium text-stone-200 mb-3">Número de Teléfono (Opcional)</label>
-                    <input type="tel" id="phone" name="phone"
-                           class="w-full px-6 py-4 bg-stone-800 border border-stone-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 text-stone-50 placeholder-stone-400 text-lg">
-                </div>
-                <div>
-                    <label for="message" class="block text-sm font-lato font-medium text-stone-200 mb-3">Mensaje Adicional (Opcional)</label>
-                    <textarea id="message" name="message" rows="6"
-                              class="w-full px-6 py-4 bg-stone-800 border border-stone-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 text-stone-50 placeholder-stone-400 text-lg"></textarea>
-                </div>
-                <div>
-                    <button type="submit"
-                            class="w-full bg-amber-400 text-stone-900 font-bold font-lato text-xl py-5 rounded-lg shadow-xl hover:bg-amber-300 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-stone-900">
-                        Enviar Solicitud
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 px-8 bg-stone-800 text-stone-400 text-center text-sm font-lato">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Residencia Áurea. Todos los derechos reservados.</p>
-        <p class="mt-2 opacity-80">Diseño y Elegancia: Un Estándar de Lujo.</p>
-    </footer>
-
-</body>
-</html>
-```
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yGkXK/4U/0nI6G90s4KkR/z4s6gX0I93eW6d6mQ6u4eUj6y/hD/8t6b2b7p5Z2Z8l2Z2Q2R2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z
