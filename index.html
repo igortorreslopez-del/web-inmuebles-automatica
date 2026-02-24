@@ -1,12 +1,17 @@
-¡Claro! Aquí tienes el código HTML para el archivo `index.html` que cumple con tus especificaciones.
-
-```html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[NOMBRE DE LA PROPIEDAD DE LUJO]</title>
+    <title>Nombre | Propiedad de Lujo Exclusiva</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,23 +19,131 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        'playfair': ['"Playfair Display"', 'serif'],
-                        'raleway': ['Raleway', 'sans-serif'],
-                    },
                     colors: {
                         'midnight-blue': '#0f172a',
                         'metallic-gold': '#D4AF37',
                     },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        raleway: ['Raleway', 'sans-serif'],
+                    }
                 }
             }
         }
     </script>
+</head>
+<body class="bg-midnight-blue text-white font-raleway antialiased">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Navegación Minimalista -->
+    <nav class="fixed w-full top-0 z-50 py-4 px-8 flex justify-center bg-transparent backdrop-blur-sm">
+        <a href="#" class="text-white text-3xl font-playfair tracking-wider drop-shadow-md">Nombre</a>
+    </nav>
 
-    <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yGkXK/4U/0nI6G90s4KkR/z4s6gX0I93eW6d6mQ6u4eUj6y/hD/8t6b2b7p5Z2Z8l2Z2Q2R2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z2Z8l2Z
+    <!-- Sección Hero -->
+    <header class="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Imagen de Fondo Principal -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('Imagen Principal');"></div>
+        
+        <!-- Degradado Oscuro sobre la Imagen -->
+        <div class="absolute inset-0 bg-gradient-to-t from-midnight-blue via-midnight-blue/40 to-transparent"></div>
+        
+        <div class="relative z-10 p-4 max-w-4xl mx-auto">
+            <h1 class="text-white text-6xl md:text-7xl lg:text-8xl font-playfair leading-tight drop-shadow-lg">Nombre</h1>
+            <p class="mt-4 text-xl md:text-2xl font-raleway text-gray-200 drop-shadow-md italic">Un Legado de Lujo y Exclusividad</p>
+            <a href="#about" class="mt-8 inline-block bg-metallic-gold text-midnight-blue font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Descubre Esta Propiedad Única
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección 'Sobre la Propiedad' -->
+    <section id="about" class="py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+        <h2 class="text-5xl font-playfair text-center text-metallic-gold mb-12 border-b-2 border-metallic-gold/30 pb-4">Sobre Nombre</h2>
+        <div class="bg-midnight-blue p-8 md:p-12 rounded-lg shadow-xl border border-metallic-gold/30">
+            <p class="text-lg md:text-xl leading-relaxed text-gray-200 text-justify">Descripción</p>
+        </div>
+
+        <!-- Detalles de la Propiedad (ejemplos) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+            <div class="flex items-center space-x-4 bg-midnight-blue p-6 rounded-lg shadow-md border border-metallic-gold/20">
+                <i class="fa-solid fa-bed text-3xl text-metallic-gold"></i>
+                <div>
+                    <h3 class="text-2xl font-playfair text-metallic-gold">6 Habitaciones</h3>
+                    <p class="text-gray-300">Espaciosas suites con baño privado.</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 bg-midnight-blue p-6 rounded-lg shadow-md border border-metallic-gold/20">
+                <i class="fa-solid fa-bath text-3xl text-metallic-gold"></i>
+                <div>
+                    <h3 class="text-2xl font-playfair text-metallic-gold">8 Baños</h3>
+                    <p class="text-gray-300">Diseño elegante y acabados de lujo.</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 bg-midnight-blue p-6 rounded-lg shadow-md border border-metallic-gold/20">
+                <i class="fa-solid fa-ruler-combined text-3xl text-metallic-gold"></i>
+                <div>
+                    <h3 class="text-2xl font-playfair text-metallic-gold">1200 m² Construidos</h3>
+                    <p class="text-gray-300">Áreas generosas para su confort.</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 bg-midnight-blue p-6 rounded-lg shadow-md border border-metallic-gold/20">
+                <i class="fa-solid fa-tree text-3xl text-metallic-gold"></i>
+                <div>
+                    <h3 class="text-2xl font-playfair text-metallic-gold">2500 m² Terreno</h3>
+                    <p class="text-gray-300">Jardines privados y vistas espectaculares.</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 bg-midnight-blue p-6 rounded-lg shadow-md border border-metallic-gold/20">
+                <i class="fa-solid fa-swimming-pool text-3xl text-metallic-gold"></i>
+                <div>
+                    <h3 class="text-2xl font-playfair text-metallic-gold">Piscina Infinita</h3>
+                    <p class="text-gray-300">Relájese con vistas al mar.</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4 bg-midnight-blue p-6 rounded-lg shadow-md border border-metallic-gold/20">
+                <i class="fa-solid fa-car text-3xl text-metallic-gold"></i>
+                <div>
+                    <h3 class="text-2xl font-playfair text-metallic-gold">Garaje para 4 Coches</h3>
+                    <p class="text-gray-300">Seguridad y comodidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Visual Elegante -->
+    <section id="gallery" class="py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+        <h2 class="text-5xl font-playfair text-center text-metallic-gold mb-12 border-b-2 border-metallic-gold/30 pb-4">Galería Exclusiva</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <img src="https://images.unsplash.com/photo-1570129477085-a70044d036f0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vista interior de lujo" class="w-full h-80 object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-transparent hover:border-metallic-gold/50">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba38b72?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fachada de la villa" class="w-full h-80 object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-transparent hover:border-metallic-gold/50">
+            <img src="https://images.unsplash.com/photo-1594236486419-5d43d3e3a478?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Piscina y jardines" class="w-full h-80 object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-transparent hover:border-metallic-gold/50">
+            <img src="https://images.unsplash.com/photo-1560448204-62529a9972c3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cocina de diseño" class="w-full h-80 object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-transparent hover:border-metallic-gold/50">
+            <img src="https://images.unsplash.com/photo-1599424874258-00508544a47d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dormitorio principal" class="w-full h-80 object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-transparent hover:border-metallic-gold/50">
+            <img src="https://images.unsplash.com/photo-1560448204-c36141a067a5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Salón con vistas" class="w-full h-80 object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300 border-2 border-transparent hover:border-metallic-gold/50">
+        </div>
+    </section>
+
+    <!-- Sección de Llamada a la Acción/Contacto Final -->
+    <section class="py-20 px-4 md:px-8 lg:px-16 bg-midnight-blue text-center">
+        <h2 class="text-5xl font-playfair text-metallic-gold mb-8">Interesado en esta Propiedad Única?</h2>
+        <p class="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto">
+            Contacte a nuestro equipo de ventas exclusivo para programar una visita privada y descubrir cada rincón de este paraíso.
+        </p>
+        <a href="https://wa.me/1234567890" target="_blank" class="inline-block bg-metallic-gold text-midnight-blue font-semibold text-xl py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+            <i class="fa-brands fa-whatsapp mr-3"></i> Contactar por WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 px-4 text-center text-gray-400 border-t border-metallic-gold/20">
+        <p>&copy; 2023 Nombre. Todos los derechos reservados.</p>
+        <p class="mt-2 text-sm">Diseñado para la exclusividad.</p>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-8 right-8 z-50 bg-metallic-gold text-midnight-blue p-5 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
